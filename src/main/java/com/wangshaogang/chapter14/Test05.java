@@ -18,11 +18,24 @@ public class Test05 {
 		}
 		System.out.println("---------------------------------");
 
-		if (test05_2.getClass().isInstance(new Test05_2_2())) {
+		if (Test05_2_2.class.isInstance(test05_2)) {
 			((Test05_2_2) test05_2).f();
 		}
-		if (test05_3.getClass().isInstance(new Test05_2_2())) {
+		if (Test05_2_2.class.isInstance(test05_3)) {
 			((Test05_2_2) test05_3).f();
+		}
+		System.out.println("---------------------------------");
+
+		if (Test05_2.class.isInstance(test05_2)) {
+			System.out.println(true);
+		} else {
+			System.out.println(false);
+		}
+
+		if (Test05_2.class == test05_2.getClass()) {
+			System.out.println(true);
+		} else {
+			System.out.println(false);
 		}
 		System.out.println("---------------------------------");
 
