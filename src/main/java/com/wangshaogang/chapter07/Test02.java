@@ -3,14 +3,14 @@ package com.wangshaogang.chapter07;
 
 public class Test02 {
     private String a = "a";
-    public void append(String str) {
+    void append(String str) {
         a += str;
     }
 
-    public void appendB() {
+    void appendB() {
         append("b");
     }
-    public void appendC() {
+    void appendC() {
         append("c");
     }
     public void appendD() {
@@ -35,15 +35,16 @@ public class Test02 {
 
 class Test02_2 extends Test02 {
     // 注意这个方法重写了
+    @Override
     public void appendD() {
         append("new");
         // 超类
         super.appendD();
     }
-    public void appendX() {
+    private void appendX() {
         append("X");
     }
-    public void appendY() {
+    private void appendY() {
         append("Y");
     }
 
